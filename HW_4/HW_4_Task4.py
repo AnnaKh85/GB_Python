@@ -14,7 +14,6 @@ def get_ratios(k):
     while ratios[0] == 0:
         ratios[0] = randint(1, 10)
     return ratios
-
 def get_polynomial(k, ratios):
     var = ['*x^']*(k-1) + ['*x']
     polynomial = [[a, b, c] for a, b, c in itertools.zip_longest(ratios, var, range(k, 1, -1), fillvalue = '') if a !=0]
